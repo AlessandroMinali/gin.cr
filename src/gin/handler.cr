@@ -35,7 +35,7 @@ module Gin
     ->() {
       if req=@req
         if req.resource =~ /\A(#{p})(\/|\z)/
-          req.resource = $2
+          req.resource = req.resource.lstrip($1)
           $1
         end
       end
