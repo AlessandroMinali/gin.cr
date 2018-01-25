@@ -12,7 +12,7 @@ module Gin
     dup._call(context)
   end
 
-  def call(context)
+  def _call(context)
     @matched = false
     @req, @res = context.request, context.response
     routes
