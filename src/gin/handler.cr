@@ -34,7 +34,7 @@ module Gin
   def path(p : String)
     ->() {
       if req=@req
-        if req.resource =~ /\A(#{p})(.*)/
+        if req.resource =~ /\A(#{p})(\/|\z)/
           req.resource = $2
           $1
         end
