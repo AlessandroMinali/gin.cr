@@ -88,6 +88,12 @@ class App
 end
 ```
 
+### Run Server
+```crystal
+server = HTTP::Server.new(8080, [App.new])
+puts "Listening on http://127.0.0.1:8080"
+server.listen
+```
 
 ## Contributing
 
