@@ -9,10 +9,6 @@ module Gin
   abstract def routes
 
   def call(context)
-    dup._call(context)
-  end
-
-  def _call(context)
     @matched = false
     @req, @res = context.request, context.response
     routes
