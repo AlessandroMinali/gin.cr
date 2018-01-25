@@ -78,10 +78,10 @@ class App
   include Gin
 
   def routes
-    on get, path("/hello"), segement do |_,_,name|
+    on get, path("/hello"), segment do |_,_,name|
       puts "Hello #{name}"
     end
-    on get, path("/goodbye"), segement do |_,_,name|
+    on get, path("/goodbye"), segment do |_,_,name|
       puts "Goodbye #{name}."
     end
   end
